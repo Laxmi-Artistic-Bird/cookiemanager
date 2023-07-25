@@ -25,8 +25,8 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php ../../../../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder",
-            "@php ../../../../../artisan migrate --path=Artisticbird\\Cookies\\Database\\migrations"
+            "@php ../../../../../artisan migrate --path=Artisticbird\\Cookies\\Database\\migrations",
+            "@php ../../../../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
         ]
     }
 }

@@ -24,13 +24,18 @@
         }
     },
     "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php ../../artisan migrate --path=Database\\migrations",
+            "@php ../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
+        ],
         "post-install-cmd": [
             "@php ../../artisan migrate --path=Database\\migrations",
-            "@php ../../artisan db:seed --class=Seeds\\CookieCategorySeeder"
+            "@php ../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
         ],
         "post-update-cmd": [
             "@php ../../artisan migrate --path=Database\\migrations",
-            "@php ../../artisan db:seed --class=Database\\Seeds\\CookieCategorySeeder"
+            "@php ../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
         ]
     }
 }

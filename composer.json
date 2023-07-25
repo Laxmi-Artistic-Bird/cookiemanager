@@ -25,12 +25,12 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "@php ../../artisan migrate --path=Artisticbird\\Cookies\\Database\\migrations",
-            "@php ../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
+            "@php ../../artisan migrate --path=Database\\migrations",
+            "@php ../../artisan db:seed --class=Seeds\\CookieCategorySeeder"
         ],
         "post-update-cmd": [
-            "@php ../../artisan migrate --path=Artisticbird\\Cookies\\Database\\migrations",
-            "@php ../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder"
+            "@php ../../artisan migrate --path=Database\\migrations",
+            "@php ../../artisan db:seed --class=Database\\Seeds\\CookieCategorySeeder"
         ]
     }
 }

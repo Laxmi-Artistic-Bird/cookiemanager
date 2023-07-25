@@ -1,0 +1,32 @@
+{
+    "name": "artisticbird/cookies",
+    "description": "This will used to manage web cookies",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Artisticbird\\Cookies\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Artisticbird-Tech-Pvt-Ltd",
+            "email": "nfo@artisticbird.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Artisticbird\\Cookies\\CookiesServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php ../../../../../artisan db:seed --class=Artisticbird\\Cookies\\Database\\Seeds\\CookieCategorySeeder",
+            "@php ../../../../../artisan migrate --path=Artisticbird\\Cookies\\Database\\migrations"
+        ]
+    }
+}
